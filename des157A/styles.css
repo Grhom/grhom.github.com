@@ -31,6 +31,7 @@ a:hover {
 }
 section h2 {
   font-size: 30px;
+  text-decoration: underline;
 }
 .title h1,
 .title h2 {
@@ -59,7 +60,6 @@ section h2 {
   flex-direction: row;
   justify-content: center;
   justify-content: space-around;
-  overflow: hidden;
 }
 .banner img {
   width: 28vh;
@@ -125,13 +125,36 @@ section {
   display: flex;
   flex-direction: row;
   position: relative;
+  overflow: hidden;
 }
+/* bunny animation starts here */
 #bunny {
   position: absolute;
   right: 0px;
   bottom: 0px;
   transform: rotate(180deg);
+  animation: bunnyanimate 3s ease-in-out infinite alternate;
 }
+
+@keyframes bunnyanimate {
+  0% {
+    right: -75px;
+  }
+  25% {
+    right: -50px;
+  }
+  50% {
+    right: -25px;
+  }
+  75% {
+    right: -15px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+/* bunny animation ends here */
 
 /* column styling ends here */
 
