@@ -1,0 +1,147 @@
+/* styling color and text starts here */
+body {
+  background-color: #ffe8f0;
+  font-family: "Balsamiq Sans", cursive;
+}
+header h1,
+header h2,
+h3 {
+  font-size: 25px;
+  color: white;
+  text-shadow: -1px 1.5px 0 #84afff, 1px 1.5px 0 #84afff, 1px -1.5px 0 #84afff,
+    -1px -1.5px 0 #84afff;
+}
+ul,
+li,
+p,
+a {
+  font-size: 25px;
+  color: white;
+  text-shadow: -1px 1.5px 0 #ff84ad, 1px 1.5px 0 #ff84ad, 1px -1.5px 0 #ff84ad,
+    -1px -1.5px 0 #ff84ad;
+}
+
+ul:hover,
+li:hover,
+p:hover,
+a:hover {
+  text-decoration: none;
+  color: #ff84ad;
+}
+section h2 {
+  font-size: 30px;
+}
+.title h1,
+.title h2 {
+  padding-left: 175px;
+}
+/* styling color and text ends here */
+
+#bunny {
+  position: absolute;
+  right: 181px;
+  bottom: 50px;
+  transform: rotate(180deg);
+}
+
+/* banner styling starts here */
+.container {
+  background-color: #ffccdd;
+  width: 100%;
+  max-width: 1366px;
+  max-height: 800px;
+  margin: 0 auto;
+  padding: 2em;
+  margin-top: 20px;
+}
+.banner {
+  width: 100%;
+  max-width: 1100px;
+  max-height: 250px;
+  background-color: #ffccdd;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.banner img {
+  width: 28vh;
+  height: 28vh;
+}
+img {
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rbga(0, 0, 0, 0.5);
+}
+/* parent elements of each face of the card, front & back */
+.banner .card1,
+.banner .card2,
+.banner .card3 {
+  display: flex;
+  position: relative; /* will place image behind the card */
+  transition: all 1s linear;
+  transform-style: preserve-3d;
+  /* specifies how nested elements are rended in 3-D space 
+  preserve 3-d specifies that element child and preserves position*/
+}
+
+/* why is label front vs front 1 changing the size of the banner? */
+#front1,
+#front2,
+#front3 {
+  z-index: 2;
+  /* places card in front */
+  transform: rotateY(0deg);
+  /* setting this as as a inital value so the front of the card is facing the correct way */
+  backface-visibility: hidden;
+  /* defines whether or not the back face of an element should be visible when facing the user */
+  position: absolute;
+}
+#back1,
+#back2,
+#back3 {
+  z-index: 1;
+  /* placs card in back */
+  transform: rotateY(180deg);
+}
+.card1:hover,
+.card2:hover,
+.card3:hover {
+  transform: rotateY(-180deg);
+  /* I want the hover to make the card rotate 180 degrees on the y-axis */
+}
+.banner {
+  /* I want a picking up motion, changing the perspective changes the distance between the viewer and the computer screen */
+  perspective: 1000px;
+}
+/* banner styling ends here */
+
+/* column styling starts here */
+section {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  padding: 20px;
+  align-items: center;
+}
+
+#projects {
+  display: flex;
+  flex-direction: row;
+}
+
+#portal1 #portal2 #portal3 ul li {
+  list-style-type: none;
+}
+/* column styling ends here */
+
+/* footer starts here */
+footer {
+  padding-top: 2em;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 500px;
+}
+/* footer ends here */
