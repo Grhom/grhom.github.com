@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../../overflow-hidden"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "grhom.github.com"
+  }
+}

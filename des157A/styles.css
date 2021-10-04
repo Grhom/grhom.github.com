@@ -19,6 +19,7 @@ a {
   color: white;
   text-shadow: -1px 1.5px 0 #ff84ad, 1px 1.5px 0 #ff84ad, 1px -1.5px 0 #ff84ad,
     -1px -1.5px 0 #ff84ad;
+  list-style-type: none;
 }
 
 ul:hover,
@@ -37,13 +38,6 @@ section h2 {
 }
 /* styling color and text ends here */
 
-#bunny {
-  position: absolute;
-  right: 181px;
-  bottom: 50px;
-  transform: rotate(180deg);
-}
-
 /* banner styling starts here */
 .container {
   background-color: #ffccdd;
@@ -51,7 +45,8 @@ section h2 {
   max-width: 1366px;
   max-height: 800px;
   margin: 0 auto;
-  padding: 2em;
+  padding-top: 2em;
+  padding-bottom: 4em;
   margin-top: 20px;
 }
 .banner {
@@ -129,11 +124,15 @@ section {
 #projects {
   display: flex;
   flex-direction: row;
+  position: relative;
+}
+#bunny {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  transform: rotate(180deg);
 }
 
-#portal1 #portal2 #portal3 ul li {
-  list-style-type: none;
-}
 /* column styling ends here */
 
 /* footer starts here */
