@@ -1,6 +1,6 @@
 /* styling color and text starts here */
 body {
-  background-color: #ffe8f0;
+  background-color: #fabad0;
   font-family: "Balsamiq Sans", cursive;
 }
 header h1,
@@ -11,27 +11,38 @@ h3 {
   text-shadow: -1px 1.5px 0 #84afff, 1px 1.5px 0 #84afff, 1px -1.5px 0 #84afff,
     -1px -1.5px 0 #84afff;
 }
+
+ul li {
+  box-sizing: border-box;
+}
+
 ul,
 li,
 p,
 a {
-  font-size: 25px;
+  font-size: 22px;
   color: white;
   text-shadow: -1px 1.5px 0 #ff84ad, 1px 1.5px 0 #ff84ad, 1px -1.5px 0 #ff84ad,
     -1px -1.5px 0 #ff84ad;
   list-style-type: none;
+  line-height: 45px;
+  text-align: justify; /* For Edge */
+  text-align-last: left;
+}
+.col {
+  margin-bottom: 0px;
 }
 
-ul:hover,
 li:hover,
 p:hover,
 a:hover {
-  text-decoration: none;
-  color: #ff84ad;
+  transform: scale(1.05);
 }
 section h2 {
   font-size: 30px;
   text-decoration: underline;
+  margin-block-start: none;
+  margin-block-end: none;
 }
 .title h1,
 .title h2 {
@@ -41,7 +52,7 @@ section h2 {
 
 /* banner styling starts here */
 .container {
-  background-color: #ffccdd;
+  background-color: #ff9dbd;
   width: 100%;
   max-width: 1366px;
   max-height: 800px;
@@ -54,7 +65,7 @@ section h2 {
   width: 100%;
   max-width: 1100px;
   max-height: 250px;
-  background-color: #ffccdd;
+  background-color: #ff9dbd;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -103,8 +114,18 @@ img {
 .card1:hover,
 .card2:hover,
 .card3:hover {
-  transform: rotateY(-180deg);
+  animation: cardflip 500ms forwards;
+  animation-iteration-count: 1;
+  /* transform: rotateY(-180deg); */
   /* I want the hover to make the card rotate 180 degrees on the y-axis */
+}
+@keyframes cardflip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-180deg);
+  }
 }
 .banner {
   /* I want a picking up motion, changing the perspective changes the distance between the viewer and the computer screen */
