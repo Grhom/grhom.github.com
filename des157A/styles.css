@@ -86,7 +86,7 @@ img {
 .banner .card3 {
   display: flex;
   position: relative; /* will place image behind the card */
-  transition: all 1s linear;
+  transition: transform 1s;
   transform-style: preserve-3d;
   /* specifies how nested elements are rended in 3-D space 
   preserve 3-d specifies that element child and preserves position*/
@@ -114,7 +114,8 @@ img {
 .card1:hover,
 .card2:hover,
 .card3:hover {
-  animation: flip 500ms 1 forwards;
+  transform: rotateY(-180deg);
+  /* animation: flip 500ms 1 forwards; */
   /* transform: rotateY(-180deg); */
   /* I want the hover to make the card rotate 180 degrees on the y-axis */
 }
@@ -129,10 +130,8 @@ img {
     transform: rotateY(-180deg);
   }
 }
-.banner {
-  /* I want a picking up motion, changing the perspective changes the distance between the viewer and the computer screen */
-  perspective: 1000px;
-}
+/* .banner {
+
 /* banner styling ends here */
 
 /* column styling starts here */

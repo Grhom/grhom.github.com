@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experimentations Functions and DOMS</title>
+
+    <!-- internal style sheets go in the head of the document -->
+    <style>
+      body {
+        background-color: rgb(243, 139, 157);
+        align-items: center;
+        font-family: "Balsamiq Sans";
+      }
+      h3 {
+        padding-left: 10em;
+        padding-right: 10em;
+        padding-top: 5em;
+        font-size: 50px;
+        color: white;
+        text-shadow: -1px 1.5px 0 #5e8de4, 1px 1.5px 0 #5e8de4,
+          1px -1.5px 0 #5e8de4, -1px -1.5px 0 #5e8de4;
+      }
+      #bunny {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3 id="txt1"></h3>
+    <img
+      id="bunny"
+      src="animated copy.gif"
+      alt="bunny"
+      height="450"
+      width="450"
+    />
+
+    <script>
+      myFunction();
+
+      function myFunction() {
+        var prom = window.prompt(
+          "What is your favorite food? cheese, strawberry, chocolate, crackers, jelly"
+        );
+        var txt1 = document.getElementById("txt1");
+
+        console.log(prom);
+
+        if (prom == "strawberry" || prom == "chocolate" || prom == "jelly") {
+          txt1.innerHTML = "My favorite food is also " + prom;
+          //   setTimeout(myFunction, 0);
+        } else if (prom == "cheese" || prom == "crackers") {
+          txt1.innerHTML = "My I don't really like " + prom;
+          //   setTimeout(myFunction, 0);
+        } else {
+          txt1.innerHTML = "You didn't choose one of the options.";
+        }
+        // }
+      }
+
+      // use DOM to display content on page
+      // use vriables and arrays
+      // Use flow control structures such as sequences, selections and loops in your functions
+      //Have at least one function return data that is used by another function
+      //Add a comment just after your opening <script> tag that explains what your program does
+    </script>
+  </body>
+</html>
