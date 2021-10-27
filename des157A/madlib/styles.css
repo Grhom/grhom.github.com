@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #201610;
+}
+span {
+  color: #fd958e;
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: -1em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+/* styling ticket & questions */
+fieldset {
+  /* background-color: white; */
+  /* position: absolute; */
+  padding-top: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 612px;
+  height: 390px;
+}
+fieldset.open-card {
+  height: auto;
+}
+/* This is to help distinguish the label for each box */
+.question {
+  padding-bottom: 2em;
+}
+/* This is to style the enter name input box */
+#qname {
+  padding: 2em;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+::placeholder {
+  text-align: center;
+}
+/* style enter name input ends here */
+/* input.option {
+  width: 20px;
+  height: 80px;
+} */
+/* I gave up on checkbox, going to use button instead */
+
+/* styling buttons starts here */
+.btn {
+  width: 200px;
+  height: 100px;
+  margin-right: -10px;
+  margin-left: -10px;
+  /* background-color: white; */
+  border: 1px solid;
+}
+/* styling buttons ends here */
+/* styling dots */
+.unfilled-dot {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(228, 228, 228);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.filled-dot {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(2, 1, 1);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  column-gap: 15px;
+  padding-top: 90px;
+}
+/* styling dots */
+/* styling ticket & questions ends here */
+
+#open-card {
+  line-height: 4em;
+  text-align: left;
+}
+#col {
+  flex: 50%;
+}
+#row {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+.showing {
+  display: block;
+}

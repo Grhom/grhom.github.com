@@ -81,9 +81,13 @@ img {
   box-shadow: 3px 3px 6px rbga(0, 0, 0, 0.5);
 }
 /* parent elements of each face of the card, front & back */
-.banner .card1,
-.banner .card2,
-.banner .card3 {
+.flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   position: relative; /* will place image behind the card */
   transition: transform 1s;
@@ -91,33 +95,19 @@ img {
   /* specifies how nested elements are rended in 3-D space 
   preserve 3-d specifies that element child and preserves position*/
 }
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
 
-/* why is label front vs front 1 changing the size of the banner? */
-#front1,
-#front2,
-#front3 {
-  z-index: 2;
-  /* places card in front */
-  transform: rotateY(0deg);
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
   /* setting this as as a inital value so the front of the card is facing the correct way */
   backface-visibility: hidden;
   /* defines whether or not the back face of an element should be visible when facing the user */
-  position: absolute;
-}
-#back1,
-#back2,
-#back3 {
-  z-index: 1;
-  /* placs card in back */
-  transform: rotateY(180deg);
-}
-.card1:hover,
-.card2:hover,
-.card3:hover {
-  transform: rotateY(-180deg);
-  /* animation: flip 500ms 1 forwards; */
-  /* transform: rotateY(-180deg); */
-  /* I want the hover to make the card rotate 180 degrees on the y-axis */
 }
 @keyframes flip {
   0% {
