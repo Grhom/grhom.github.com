@@ -1,96 +1,27 @@
+/* css for positioning */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  width: 1366px;
+  max-width: 1366px;
+  min-width: 1366px;
+  height: 768px;
+  max-height: 768px;
+  min-height: 768px;
+  margin: 2em;
+}
+/* styling font, color, background color */
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  color: #201610;
-}
-span {
-  color: #fd958e;
-}
-
-h1 {
-  font-size: 24px;
-  margin-top: -1em;
-  margin-bottom: 2em;
-  text-align: center;
-}
-/* styling ticket & questions */
-fieldset {
-  /* background-color: white; */
-  /* position: absolute; */
-  padding-top: 4rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  margin: 4em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  width: 612px;
-  height: 390px;
-}
-fieldset.open-card {
-  height: auto;
-}
-/* This is to help distinguish the label for each box */
-.question {
-  padding-bottom: 2em;
-}
-/* This is to style the enter name input box */
-#qname {
-  padding: 2em;
-  margin-left: 200px;
-  margin-right: 200px;
-}
-::placeholder {
-  text-align: center;
-}
-/* style enter name input ends here */
-/* input.option {
-  width: 20px;
-  height: 80px;
-} */
-/* I gave up on checkbox, going to use button instead */
-
-/* styling buttons starts here */
-.btn {
-  width: 200px;
-  height: 100px;
-  margin-right: -10px;
-  margin-left: -10px;
-  /* background-color: white; */
-  border: 1px solid;
-}
-/* styling buttons ends here */
-/* styling dots */
-.unfilled-dot {
-  height: 15px;
-  width: 15px;
-  background-color: rgb(228, 228, 228);
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-}
-
-.filled-dot {
-  height: 15px;
-  width: 15px;
-  background-color: rgb(2, 1, 1);
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-}
-
-.container {
-  display: flex;
-  column-gap: 15px;
-  padding-top: 90px;
-}
-/* styling dots */
-/* styling ticket & questions ends here */
-
-#open-card {
-  line-height: 4em;
-  text-align: left;
+  font-family: "Nunito", sans-serif;
+  color: #8b9c30;
+  background-color: #d5e3b5;
+  width: 1366px;
+  height: 768px;
 }
 #col {
   flex: 50%;
@@ -99,8 +30,212 @@ fieldset.open-card {
   display: flex;
 }
 .hidden {
+  /* visibility: hidden; */
   display: none;
 }
 .showing {
   display: block;
 }
+
+#madlib p {
+  line-height: 3em;
+  text-align: left;
+  padding-top: 60px;
+  padding-left: 20px;
+  width: 48%;
+  font-style: oblique;
+  font-size: 15px;
+}
+/* styling ticket & questions */
+#qcard {
+  position: relative;
+  width: 50%;
+  padding: 25px;
+}
+#madlib {
+  position: relative;
+  width: 50%;
+  padding: 25px;
+}
+
+#qcard form {
+  display: flex;
+  /* position: absolute; */
+  top: 0in;
+  left: 0in;
+}
+#qname {
+  padding: 2em;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+#card {
+  width: 587px;
+  height: 383px;
+  margin-left: 115px;
+}
+#card-question h1 {
+  position: absolute;
+  font-size: 24px;
+  margin-bottom: 2em;
+  text-align: center;
+  top: 53px;
+  left: 330px;
+}
+label {
+  position: absolute;
+  top: 155px;
+  left: 360px;
+}
+input {
+  position: absolute;
+  top: 200px;
+  left: 135px;
+  width: 150px;
+  height: 20px;
+  border: 2px solid;
+  border-color: #8b9c30;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  padding: 1.25rem;
+  background: none;
+}
+::placeholder {
+  text-align: center;
+}
+#libcard,
+#open_close {
+  position: absolute;
+  width: 467px;
+  height: 729px;
+}
+.open_anime {
+  transform: rotateY(180deg);
+  transition: all 1s 0.3s;
+  transform-origin: 0 50%;
+}
+#open_close {
+  z-index: 1;
+}
+#libcard {
+  z-index: 0;
+}
+
+#madlib p {
+  position: absolute;
+  top: 1in;
+  left: 1in;
+}
+fieldset {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 670px;
+  height: 450px;
+  box-sizing: border-box 1000px;
+  border: none;
+}
+/* styling buttons */
+button {
+  position: absolute;
+  top: 300px;
+  left: 390px;
+  width: 100px;
+  height: 30px;
+  background-color: #feecc5;
+  border: 2px solid;
+  border-color: #8b9c30;
+  font-family: "Nunito", sans-serif;
+  color: #8b9c30;
+}
+button:hover {
+  color: #d69b1a;
+}
+
+.btn {
+  position: absolute;
+  top: 225px;
+  left: 390px;
+  width: 100px;
+  height: 30px;
+  font-family: "Nunito", sans-serif;
+  color: #8b9c30;
+}
+/* styling buttons */
+
+/* This is to help distinguish the label for each box */
+.question {
+  padding-bottom: 2em;
+  position: absolute;
+  top: 150px;
+  left: 370px;
+}
+#title_submit {
+  padding-bottom: 2em;
+  position: absolute;
+  top: 170px;
+  left: 310px;
+}
+
+/* styling dots */
+.unfilled-dot {
+  height: 5px;
+  width: 5px;
+  border: #8b9c30 2px solid;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.filled-dot {
+  height: 5px;
+  width: 5px;
+  border: #8b9c30 2px solid;
+  background-color: #8b9c30;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  column-gap: 15px;
+  margin-top: 90px;
+  position: absolute;
+  top: 280px;
+  left: 380px;
+}
+/* styling dots ends here */
+
+/* positioning cups */
+#story {
+  z-index: 1;
+}
+#madlib {
+  z-index: 2;
+}
+#pour {
+  position: absolute;
+  width: 25%;
+  top: 440px;
+  left: 300px;
+  z-index: 1;
+}
+
+#cup {
+  width: 25%;
+  position: absolute;
+  top: 480px;
+  left: 100px;
+  z-index: 0;
+}
+#cup2 {
+  width: 20%;
+  position: absolute;
+  top: 500px;
+  left: 500px;
+  z-index: -1;
+}
+
+/* positioning cups */

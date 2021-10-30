@@ -5,22 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
     <script type="text/javascript" src="script.js" defer>
     </script>
     <title>MadLibs 2.0</title>
   </head>
   <body>
+    <main>
+      <section id="qcard">
+    <img src="images/qcardbg.png" id="card">
     <!-- this is where I put the questions -->
-    <div id = "row">
-    <div id="col">
+    <!-- <div id = "row">
+    <div id="col"> -->
     <form id="myform">
       <!-- Ask to enter name -->
       <div class="top"></div>
       <section id="one" class="showing">
-      <fieldset id="name-question" >
-        <h1>Tea Party Invitation</h1>
-        <label class="question" for="qname">What is your Name?</label>
+      <fieldset id="card-question">
+        <h1>Tea Party Invitation</h1> 
         <input type="text" name="qname" id="qname" placeholder="Enter Name"> 
+        <label class="question" for="qname">What is your Name?</label>
         <button id="next1">next</button>
         <!-- <button onclick="insertName(document.getElementById('qname').value)">Enter here</button> -->
         <div class="container">
@@ -34,24 +40,18 @@
       </fieldset>
     </section>
       <div class="bottom"></div>
-    </section>
-
-
-
-  
     
       <!-- choose an option starts here -->
       <section id="two" class="hidden">
-      <fieldset>
+      <fieldset id="card-question">
         <h1>Tea Party Invitation</h1>
-        <label class="question" for="qname">Choose a theme ?</label>
+       <label class="question" for="qname">Choose a theme</label> 
         <input type="text" name="qname" id="qname" placeholder="Birthday or Anniversary"> 
-        <button id="next2">next</button>
-        <!-- <label class="question">Choose a theme</label>
-        <div class="options">
-          <input type="button" name="theme[]" class="btn" value="anniv" >
-          <input type="button" name="theme[]" class="btn" value="bday" >
-        </div> -->
+        <button id="next2">next</button> 
+        <!-- <label class="question" for="next2">Choose a theme</label>
+          <input type="button" name="theme[]" class="next2" value="Anniversary" >
+          <input type="button" name="theme[]" class="next2" value="Birthday" > -->
+ 
         <div class="container">
           <span class="filled-dot"></span>
           <span class="filled-dot"></span>
@@ -64,10 +64,10 @@
     </section>
 
     <section id="three" class="hidden">
-      <fieldset>
+      <fieldset id="card-question">
         <h1>Tea Party Invitation</h1>
         <label class="question">Choose a snack</label>
-        <input type="text" name="qname" id="qname" placeholder="Finger or Oreo?"> 
+        <input type="text" name="qname" id="qname" placeholder="Sandwhiches or Oreos"> 
         <button id="next3">next</button>
         <!-- <div class="options">
           <input type="button" name="snack[]" class="btn" value="finger" />
@@ -85,10 +85,9 @@
     </section>
 
     <section id="four" class="hidden">
-      <fieldset>
+      <fieldset id="card-question">
         <h1>Tea Party Invitation</h1>
         <label class="question">Choose a dress occasion</label>
-  
         <input type="text" name="qname" id="qname" placeholder="Formal or Casual"> 
         <button id="next4">next</button>
         <!-- <div class="options">
@@ -107,11 +106,11 @@
     </section>
 
     <section id="five" class="hidden">
-      <fieldset>
+      <fieldset id="card-question">
         <h1>Tea Party Invitation</h1>
         <label class="question">Choose an item</label>
   
-        <input type="text" name="qname" id="qname" placeholder="Cup or Samp"> 
+        <input type="text" name="qname" id="qname" placeholder="Teacup or Tea Samples"> 
         <button id="next5">next</button>
         <!-- <div class="options">
           <input type="button" name="item[]" class="btn" value="cup" />
@@ -129,8 +128,8 @@
     </section>
     
     <section id="six" class="hidden">
-      <fieldset>
-        <label class="question">Thank you for accepting our Invitation!</label>
+      <fieldset id="card-question">
+        <label id="title_submit" >Thank you for accepting our Invitation!</label>
         <!-- <div class="options"> -->
         <!-- <input type="button" name="restart[]" class="btn" value="Re-read!"/> -->
         <input type="submit" class="btn" value="Done!"/>
@@ -146,52 +145,41 @@
       </fieldset>
     </section>
       <!-- choose an option ends here -->
+    </section>
     </form>
   </div>
-  <div id="col">
+</section>
+  <!-- <div id="col"> -->
+    <!-- <section  id="leaves">
+    <img src="images/movleaves.gif">
+  </section> -->
 
     <!-- mad lib paragraphs here -->
+ <img src="images/pour.gif" id="pour">
+<img src="images/cup.png" id="cup">
+<img src="images/cup2.png" id="cup2">
 
-
-    <!-- <fieldset id="open-card">
-      <h1>You are Invited!</h1>
-    <p>
-      10/22/2021
-      <br>
-      Dear <label type="text" name="name-placeholder" id="name-placeholder"></label>, 
-      <br>
-      &emsp; &emsp; You are cordially invited to join us for an afternoon
-      <label type="text" name="theme" id="theme"></label>tea party to celebrate
-      <label type="text" name="qname" id="qname"></label>. Fine teas will be brewed,
-      and delicate <label type="text" name="snack" id="snack"></label>shall be
-      enjoyed.<label type="text" name="dress" id="dress"></label></label>dress.Please bring along your favorite <labeltype="item" name="item" id="item"></label>!
-      <br/>
-      <br/>
-      &emsp; &emsp; &emsp; Cheers,
-      <br/>
-      &emsp; &emsp; &emsp; Gennifer Hom
-  </fieldset> -->
-  </form>
-  </div>
-  <article class="madlib">
-<p id="story">
+ <section id="madlib">
+  <img src="images/madlibcard2.png" id="open_close" class="movecard">
+  <img src="images/madlibcard.png" id=libcard>
+  <section id="story">
+<p>
   10/22/2021
       <br>
-      Dear <label type="text" name="name-placeholder" id="name-placeholder"></label>, 
+      Dear ______, 
       <br>
-      &emsp; &emsp; You are cordially invited to join us for an afternoon
-      <label type="text" name="theme" id="theme"></label>tea party to celebrate
-      <label type="text" name="qname" id="qname"></label>. Fine teas will be brewed,
-      and delicate <label type="text" name="snack" id="snack"></label>shall be
-      enjoyed.<label type="text" name="dress" id="dress"></label></label>dress.Please bring along your favorite <labeltype="item" name="item" id="item"></label>!
+      &emsp;&emsp;&emsp; You are cordially invited to join us for an afternoon
+      ______ tea party to celebrate _____ party. Fine teas will be brewed,
+      and delicate ______ shall be
+      enjoyed.Please wear ____ dress. Please bring along your favorite _____ !
       <br/>
       <br/>
       &emsp; &emsp; &emsp; Cheers,
       <br/>
       &emsp; &emsp; &emsp; Gennifer Hom
-  
 </p>
-  </article>
-  </div>
+
+</section>
+</main>
   </body>
 </html>
