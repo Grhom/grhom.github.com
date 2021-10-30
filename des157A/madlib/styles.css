@@ -23,12 +23,6 @@ body {
   width: 1366px;
   height: 768px;
 }
-#col {
-  flex: 50%;
-}
-#row {
-  display: flex;
-}
 .hidden {
   /* visibility: hidden; */
   display: none;

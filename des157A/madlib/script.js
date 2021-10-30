@@ -16,29 +16,15 @@
     event.preventDefault();
     sections[1].className = "hidden";
     sections[2].className = "showing";
-
-    // for (let i = 0; i < sections.length; i++) {
-    //   console.log(i);
-    // }
   });
-  // document.querySelector("#next1").addEventListener("click", function (event) {
-  //   console.log("Pressesd next2");
-  //   event.preventDefault();
-  //   sections[1].style.display = "flex";
-  //   sections[1].style.visibility = "visible";
-  // });
+
   document.querySelector("#next2").addEventListener("click", function (event) {
     console.log("Pressesd next2");
     event.preventDefault();
     sections[2].className = "hidden";
     sections[3].className = "showing";
   });
-  // document.querySelector("#next2").addEventListener("click", function (event) {
-  //   console.log("Pressesd next2");
-  //   event.preventDefault();
-  //   sections[1].className = "hidden";
-  //   sections[2].className = "showing";
-  // });
+
   document.querySelector("#next3").addEventListener("click", function (event) {
     console.log("Pressesd next3");
     event.preventDefault();
@@ -105,37 +91,4 @@
 
     story.innerHTML = myText;
   }
-
-  // document.querySelector("#input2").addEventListener("click", function () {
-  //   sections[1].className = "hidden";
-  //   sections[2].className = "showing question2";
-  // });
-
-  // document.querySelector("#input3").addEventListener("click", function () {
-  //   sections[2].className = "hidden";
-  //   sections[3].className = "showing question3";
-  // });
-  // document.querySelector("#input4").addEventListener("click", function () {
-  //   sections[3].className = "hidden";
-  //   sections[4].className = "showing question4";
-  // });
-  // document.querySelector("#input5").addEventListener("click", function () {
-  //   sections[4].className = "hidden";
-  //   sections[5].className = "showing question5";
-  // });
 })();
-
-// var responseCounter = 0;
-// const input_vals = [];
-
-// function insertName(name) {
-//   if (event.key === "Enter") {
-//     input_vals[0] = name.value;
-//     var name_field = document.getElementById("name-question");
-//     name_field.style.visibility = "hidden";
-//   }
-// }
-
-// function insertResponse(response) {
-//   responseCounter += 1;
-// }
