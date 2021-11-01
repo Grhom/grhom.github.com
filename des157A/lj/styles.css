@@ -69,3 +69,6 @@ footer a {
 footer a:hover {
   color: #fd958e;
 }
+figcaption {
+  font-size: small;
+}
