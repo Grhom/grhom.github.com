@@ -15,12 +15,15 @@ main {
   margin: 2em;
 }
 /* styling font, color, background color */
-body,
-a {
+body {
   margin: 0;
   font-family: "Nunito", sans-serif;
   color: #8b9c30;
-  background-color: #d5e3b5; 
+  background-color: #d5e3b5;
+}
+a {
+  font-family: "Nunito", sans-serif;
+  color: #8b9c30;
 }
 footer {
   padding-left: 160px;
