@@ -68,7 +68,7 @@ footer {
   top: 0in;
   left: 0in;
 }
-#qname {
+.qname {
   padding: 2em;
   margin-left: 200px;
   margin-right: 200px;
@@ -78,7 +78,7 @@ footer {
   height: 383px;
   margin-left: 115px;
 }
-#card-question h1 {
+.card-question h1 {
   position: absolute;
   font-size: 24px;
   margin-bottom: 2em;
