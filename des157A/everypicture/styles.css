@@ -6,7 +6,7 @@
 
 #cbimage {
   position: absolute;
-  top: 250px;
+  top: 550px;
   left: 225px;
 }
 #next {
@@ -19,52 +19,93 @@
 }
 
 #one {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 35px;
   position: relative;
-  top: 220px;
-  left: 1233px;
+  top: 502px;
+  left: 1243px;
   background: transparent;
+  /* background-color: red; */
   border: none;
   font-size: 0;
 }
 #two {
-  width: 20px;
+  width: 23px;
   height: 30px;
-  top: 235px;
-  left: 1230px;
+  top: 505px;
+  left: 1240px;
   position: relative;
   background: transparent;
+  /* background-color: red; */
   border: none;
   font-size: 0;
 }
 #three {
-  width: 20px;
+  width: 22px;
   height: 30px;
-  top: 235px;
-  left: 1231px;
+  top: 505px;
+  left: 1238px;
   position: relative;
   background: transparent;
+  /* background-color: red; */
   border: none;
   font-size: 0;
 }
 #four {
-  width: 50px;
-  height: 30px;
-  top: 280px;
-  left: 1170px;
+  width: 40px;
+  height: 35px;
+  top: 551px;
+  left: 1180px;
   position: relative;
   background: transparent;
+  /* background-color: red; */
   border: none;
   font-size: 0;
 }
 #five {
   width: 70px;
   height: 90px;
-  top: 230px;
-  left: 950px;
+  top: 420px;
+  left: 1098px;
   position: relative;
   background: transparent;
+  /* background-color: red; */
+  border: none;
+  font-size: 0;
+}
+
+#six {
+  width: 90px;
+  height: 90px;
+  top: 352px;
+  left: 975px;
+  position: relative;
+  background: transparent;
+  /* background-color: red; */
+  border: none;
+  font-size: 0;
+}
+
+#seven {
+  width: 70px;
+  height: 70px;
+  top: 370px;
+  left: 1080px;
+  position: relative;
+  background: transparent;
+  /* background-color: red; */
+  border: none;
+  font-size: 0;
+}
+
+#eight {
+  width: 30px;
+  height: 30px;
+  top: 470px;
+  left: 1230px;
+  position: relative;
+  background: transparent;
+  /* background-color: red; */
   border: none;
   font-size: 0;
 }

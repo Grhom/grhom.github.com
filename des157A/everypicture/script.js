@@ -2,10 +2,13 @@
   "use strict";
 
   const myImages1 = ["pic1.png", "chb1.png", "chb2.png", "chb3.png"];
-  const myImages2 = ["lo.png", "food.png", "flowers.png"];
+  const myImages2 = ["lo.png", "christmas.png", "bowling.png", "floral.png"];
+  //   const myImages2 = ["lo.png", "food.png", "flowers.png"];
   const myImages3 = [];
   let myImages = myImages1;
   //   let myImages = myImages2;
+
+  var cherrypics = myImages1;
 
   const slide = document.getElementById("cbimage");
 
@@ -79,19 +82,23 @@
     myImages = myImages2;
     slide.src = `Images/${myImages2[currentImage]}`;
   }
-  // //   image 6
-  //   document.getElementById("six").addEventListener("click", prevsix);
-  //   function prevsix() {
-  //     currentImage = 1;
-  //     myImages = myImages2;
-  //     slide.src = `Images/${myImages2[currentImage]}`;
-  //   }
 
-  //   //   image 7
-  //   document.getElementById("seven").addEventListener("click", prevseven;
-  //   function prevseven() {
-  //     currentImage = 2;
-  //     myImages = myImages2;
-  //     slide.src = `Images/${myImages2[currentImage]}`;
-  //   }
+  document.getElementById("six").addEventListener("click", prevsix);
+  function prevsix() {
+    currentImage = 1;
+    myImages = myImages2;
+    slide.src = `Images/${myImages2[currentImage]}`;
+  }
+  document.getElementById("seven").addEventListener("click", prevseven);
+  function prevseven() {
+    currentImage = 2;
+    myImages = myImages2;
+    slide.src = `Images/${myImages2[currentImage]}`;
+  }
+  document.getElementById("eight").addEventListener("click", preveight);
+  function preveight() {
+    currentImage = 3;
+    myImages = myImages2;
+    slide.src = `Images/${myImages2[currentImage]}`;
+  }
 })();
