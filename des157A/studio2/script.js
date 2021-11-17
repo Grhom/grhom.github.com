@@ -22,7 +22,7 @@
     if (currentImage >= myImages.length) {
       currentImage = 0;
     }
-    slide.src = `Images/${myImages1[currentImage]}`;
+    slide.src = `images/${myImages1[currentImage]}`;
     // slide.src = `Images/${myImages2[currentImage]}`;
   }
 
@@ -33,7 +33,7 @@
     if (currentImage == -1) {
       currentImage = myImages.length - 1;
     }
-    slide.src = `Images/${myImages1[currentImage]}`;
+    slide.src = `images/${myImages1[currentImage]}`;
     // slide.src = `Images/${myImages2[currentImage]}`;
   }
 
@@ -44,7 +44,7 @@
   function prevone() {
     currentImage = 0;
     myImages = myImages1;
-    slide.src = `Images/${myImages1[currentImage]}`;
+    slide.src = `images/${myImages1[currentImage]}`;
   }
 
   //   image two
@@ -53,7 +53,7 @@
   function prevtwo() {
     currentImage = 1;
     myImages = myImages1;
-    slide.src = `Images/${myImages1[currentImage]}`;
+    slide.src = `images/${myImages1[currentImage]}`;
   }
 
   //   image three
@@ -61,7 +61,7 @@
   function prevthree() {
     currentImage = 2;
     myImages = myImages1;
-    slide.src = `Images/${myImages1[currentImage]}`;
+    slide.src = `images/${myImages1[currentImage]}`;
   }
 
   //   image four
@@ -70,7 +70,7 @@
   function prevfour() {
     currentImage = 3;
     myImages = myImages1;
-    slide.src = `Images/${myImages1[currentImage]}`;
+    slide.src = `images/${myImages1[currentImage]}`;
   }
 
   //   image five
@@ -80,25 +80,25 @@
   function prevfive() {
     currentImage = 0;
     myImages = myImages2;
-    slide.src = `Images/${myImages2[currentImage]}`;
+    slide.src = `images/${myImages2[currentImage]}`;
   }
 
   document.getElementById("six").addEventListener("click", prevsix);
   function prevsix() {
     currentImage = 1;
     myImages = myImages2;
-    slide.src = `Images/${myImages2[currentImage]}`;
+    slide.src = `images/${myImages2[currentImage]}`;
   }
   document.getElementById("seven").addEventListener("click", prevseven);
   function prevseven() {
     currentImage = 2;
     myImages = myImages2;
-    slide.src = `Images/${myImages2[currentImage]}`;
+    slide.src = `images/${myImages2[currentImage]}`;
   }
   document.getElementById("eight").addEventListener("click", preveight);
   function preveight() {
     currentImage = 3;
     myImages = myImages2;
-    slide.src = `Images/${myImages2[currentImage]}`;
+    slide.src = `images/${myImages2[currentImage]}`;
   }
 })();
