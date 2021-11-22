@@ -1,5 +1,5 @@
 /* styling dice */
-/* .game {
+.game {
   position: relative;
   width: auto;
   height: 100%;
@@ -142,7 +142,7 @@
 
 .show-2 {
   transform: rotateX(450deg) rotateZ(-720deg);
-} */
+}
 /* dice ends here */
 input {
   position: absolute;
