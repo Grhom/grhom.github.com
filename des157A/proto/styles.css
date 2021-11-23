@@ -144,6 +144,7 @@
 }
 
 /* dice ends here */
+
 input {
   position: absolute;
   top: 31%;
@@ -239,4 +240,30 @@ button:active {
 a {
   color: white;
   text-decoration: none;
+}
+#instructionpg {
+  position: absolute;
+  top: 755px;
+  left: 100px;
+  padding: 30px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: left;
+  flex-direction: row;
+  gap: 200px;
+  font-size: 25px bold;
+}
+#gamepg {
+  position: absolute;
+  top: 955px;
+  left: 445px;
+  padding: 30px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: left;
+  flex-direction: row;
+  gap: 200px;
+  font-size: 25px bold;
 }
