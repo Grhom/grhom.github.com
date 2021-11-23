@@ -119,24 +119,34 @@
   };
 
   function rollDice() {
-    var diceOne = Math.floor(Math.random() * 6 + 1);
-    var diceTwo = Math.floor(Math.random() * 6 + 1);
+    let diceOneVal = Math.floor(Math.random() * 6 + 1);
+    let diceTwoVal = Math.floor(Math.random() * 6 + 1);
 
-    console.log(diceOne + " " + diceTwo);
+    // diceOneVal = 2;
+    // console.log(diceOneVal + " " + diceTwoVal);
 
     for (var i = 1; i <= 6; i++) {
+      // if (DiceOne.classList.contains(`show-${diceOneVal}`)) {
+      //   DiceOne.style.transform = "rotateZ(60deg)";
+      //   console.log(DiceOne.classList);
+      //   console.log("Same Val" + ` ${diceOneVal}`);
+      // }
       DiceOne.classList.remove("show-" + i);
-      if (diceOne === i) {
+      if (diceOneVal === i) {
         DiceOne.classList.add("show-" + i);
       }
     }
 
-    for (var i = 1; i <= 6; k++) {
+    for (var i = 1; i <= 6; i++) {
+      // if (DiceTwo.classList.contains(`show-${diceTwoVal}`)) {
+      //   // DiceTwo.style.transform = "rotate(360deg)";
+      //   console.log("Same Val");
+      // }
       DiceTwo.classList.remove("show-" + i);
-      if (diceTwo === i) {
+      if (diceTwoVal === i) {
         DiceTwo.classList.add("show-" + i);
       }
     }
-    setTimeout(rollDice(), 1000);
+    // setTimeout(rollDice(), 1000);
   }
 })();

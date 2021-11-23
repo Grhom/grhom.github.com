@@ -9,6 +9,7 @@
   position: relative;
   display: inline-block;
 }
+
 .dice {
   position: relative;
   width: 100px;
@@ -26,6 +27,7 @@
   background-color: white;
   box-shadow: inset 2px 2px white;
 }
+
 .dice-one {
   left: 550px;
   top: 750px;
@@ -123,26 +125,24 @@
 .show-1 {
   transform: rotateX(720deg) rotateZ(-720deg);
 }
-
-.show-6 {
-  transform: rotateX(-900deg) rotateZ(1080deg);
+.show-2 {
+  transform: rotateX(180deg) rotateZ(-720deg);
 }
 
 .show-3 {
-  transform: rotateY(-450deg) rotateZ(-1440deg);
-}
-
-.show-4 {
   transform: rotateY(810deg) rotateZ(720deg);
+}
+.show-4 {
+  transform: rotateY(810deg) rotateZ(630deg);
 }
 
 .show-5 {
-  transform: rotateX(-810deg) rotateZ(-1080deg);
-}
-
-.show-2 {
   transform: rotateX(450deg) rotateZ(-720deg);
 }
+.show-6 {
+  transform: rotateY(-450deg) rotateZ(-1440deg);
+}
+
 /* dice ends here */
 input {
   position: absolute;
@@ -180,7 +180,7 @@ body {
 }
 #happycorgi {
   position: absolute;
-  top: 45%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 50%;
