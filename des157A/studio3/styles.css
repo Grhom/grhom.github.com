@@ -405,12 +405,11 @@ a {
   left: 100px;
   padding: 30px;
   display: flex;
-  font-size: 20px;
   font-weight: 600;
   justify-content: left;
   flex-direction: row;
   gap: 200px;
-  font-size: 25px bold;
+  font-size: 25px;
 }
 #gamepg {
   margin-top: 10%;
@@ -419,9 +418,8 @@ a {
   justify-content: space-between;
   margin-left: 70px;
   margin-right: 70px;
-  font-size: 20px;
   font-weight: 600;
-  font-size: 25px bold;
+  font-size: 25px;
   z-index: -10000;
 }
 
