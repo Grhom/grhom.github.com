@@ -21,7 +21,16 @@
   var DiceTwo = document.getElementById("dice2");
   var ComeOut = document.getElementById("roll");
 
-  var win = document.getElementById("header");
+  var win = document.getElementById("win");
+
+  // sound variables
+  var bark = document.getElementById("bark");
+  var happy = document.getElementById("happy");
+  var dicesound = document.getElementById("rolling");
+  // icons
+  var playsound = document.getElementById("playsound");
+  var mute = document.getElementById("mute");
+  var volume = document.getElementById("volume");
 
   var gameData = {
     players: ["player1", "player2"],
@@ -32,6 +41,36 @@
     index: 0,
     gameEnd: 29,
   };
+
+  volume.addEventListener("change", function (e) {
+    bark.volume = e.currentTarget.value / 100;
+    happy.volume = e.currentTarget.value / 100;
+    dicesound.volume = e.currentTarget.value / 100;
+    unmute();
+  });
+
+  playsound.addEventListener("click", function () {
+    // show mute icon
+    mute.hidden = false;
+    // mute volume slider
+    volume.value = 0;
+    // hide play sounds
+    playsound.hidden = true;
+
+    // turn off sounds
+    bark.volume = 0;
+    happy.volume = 0;
+    dicesound.volume = 0;
+  });
+
+  function unmute() {
+    // show sound icon
+    mute.hidden = true;
+    // show play sounds
+    playsound.hidden = false;
+  }
+
+  mute.addEventListener("click", unmute);
 
   startGame.addEventListener("click", function () {
     let name1 = title1.value || gameData.players[0];
@@ -106,6 +145,7 @@
     gameData.roll1 = rolls.dice1;
     gameData.roll2 = rolls.dice2;
     gameData.rollSum = rolls.dice1 + rolls.dice2;
+    dicesound.play();
 
     // if two 1's are rolled
     if (gameData.rollSum === 2) {
@@ -138,6 +178,7 @@
       // }</p>`;
       happycorgi.hidden = true;
       angrycorgi.hidden = false;
+      bark.play();
       if (gameData.index == 0) {
         player1.classList.add("highlight");
         player1.classList.remove("nohighlight");
@@ -156,6 +197,7 @@
     else {
       happycorgi.hidden = false;
       angrycorgi.hidden = true;
+
       gameData.score[gameData.index] += gameData.rollSum;
 
       // document.getElementById("pass").addEventListener("click", function () {
@@ -168,8 +210,11 @@
     function checkWinningCondition() {
       if (gameData.score[gameData.index] > gameData.gameEnd) {
         // win.innerHTML=`${} Wins!`
-        win.innerHTML = `<h1>${gameData.players[gameData.index]} wins!</h1>`;
+        win.innerHTML = `${gameData.players[gameData.index]} wins!`;
         console.log("win!");
+        setTimeout(() => {
+          happy.play();
+        }, 500);
       } else {
         // show current score
         // score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}:${gameData.score[0]}</strong> and <strong>The score is currently <strong>${gameData.players[1]}:${gameData.score[1]}</strong></p>`;

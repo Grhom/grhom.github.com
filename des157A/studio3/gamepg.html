@@ -19,7 +19,17 @@
   </head>
   <body>
     <div id="header">
-      <h1>Game of Corgi</h1>
+      <img src="images/help.png" id="help" />
+      <h1 id="win">Game of Corgi</h1>
+
+      <div id="sound">
+        <img src="images/soundicon.png" alt="sound" id="playsound" />
+        <img src="images/mute.png" alt="mute" id="mute" hidden="true" />
+        <input type="range" class="slider" id="volume" />
+        <audio id="bark" src="sounds/bark.mp3"></audio>
+        <audio id="happy" src="sounds/happypup.mp3"></audio>
+        <audio id="rolling" src="sounds/dicesound.wav"></audio>
+      </div>
     </div>
 
     <div id="scoreboard">
