@@ -2,22 +2,30 @@ body {
   background-color: #d5e3b5;
   font-family: "Nunito", sans-serif;
 }
-
-#header {
-  background-color: #abbe81;
+#bone1 img,
+#bone2 img {
+  width: 500px;
+  height: auto;
 }
-#header h1 {
-  font-size: 40px;
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#helpcard {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100000000;
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  color: white;
-  padding: 30px;
-  margin-top: 0;
 }
-.play-button button {
+.play-game button {
   position: relative;
-  top: 710px;
-  left: 68%;
-  transform: translate(-50%, -50%);
+  transform: translate(10%, 1040%);
   max-width: 22%;
   max-height: 22%;
   padding: 15px 50px;
@@ -31,11 +39,108 @@ body {
   outline: none;
   transition: 0.3s;
 }
+#instheader h1 {
+  background-color: #abbe81;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  padding: 25px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#header {
+  background-color: #abbe81;
+}
+#header h1 {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  padding-top: 5%;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+.box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+#header img {
+  align-self: center;
+}
+#intro {
+  display: flex;
+  flex-direction: row;
+}
+#card {
+  padding-left: 45%;
+}
+#inst {
+  max-width: 93%;
+  max-height: 93%;
+  width: 720px;
+  height: auto;
+}
+.play-button button {
+  position: relative;
+  transform: translate(170%, 1000%);
+  max-width: 22%;
+  max-height: 22%;
+  padding: 15px 50px;
+  color: #fff;
+  background-color: #fe92a3;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 1px 3px #decab2;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* #help {
+  padding-left: 6%;
+} */
+/* .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 2px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+} */
+
 .roll-button button {
-  position: absolute;
+  position: relative;
   top: 93%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -320%);
   max-width: 50%;
   max-height: 50%;
   padding: 15px 50px;
@@ -48,6 +153,11 @@ body {
   box-shadow: 1px 3px #bac79f;
   outline: none;
   transition: 0.3s;
+  z-index: 0;
+}
+
+#roll {
+  z-index: 0;
 }
 
 #gamecontrol button {
@@ -60,30 +170,20 @@ body {
   font-weight: 600;
   border-radius: 10px;
   box-shadow: 1px 3px #bac79f;
+  z-index: 10000000;
 }
 #gamecontrol {
-  position: absolute;
-  text-align: center;
-  top: 82%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
   max-width: 50%;
   max-height: 50%;
+  gap: 10px;
 }
 button:hover,
 button:active {
   outline: none;
   background: #fe7489;
   cursor: pointer;
-}
-#score {
-}
-
-#game {
-  background-color: #eaeaea;
-}
-#actions {
-  background-color: silver;
 }
 
 #corgiMove {
@@ -96,12 +196,16 @@ button:active {
 }
 #happycorgi,
 #angrycorgi {
-  position: absolute;
+  position: relative;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 45%;
-  max-height: 45%;
+  transform: translate(-50%, -40%);
+  max-width: 100%;
+  max-height: 100%;
+}
+#wincorgi {
+  width: 600px;
+  height: auto;
 }
 #scoreheader {
   max-width: 100%;
@@ -155,10 +259,11 @@ input:focus {
   padding: 20px;
 }
 .highlight {
-  border: solid 4px #fe7489;
+  border: solid 5px #ff6a80;
 }
 .nohighlight {
   border: solid 4px #d69163;
+  opacity: 0.5;
 }
 #score1,
 #score2 {
@@ -174,12 +279,14 @@ input:focus {
 
 /* styling dice */
 .diceroll {
+  display: flex;
+  /* flex: 1; */
   position: relative;
+  /* justify-content: center; */
   width: auto;
-  padding-left: 50%;
-  padding-right: 50%;
+  left: 50%;
   height: 100%;
-  transform: translateY(-30px);
+  transform: translateY(50px);
 }
 
 .dice {
@@ -202,13 +309,14 @@ input:focus {
 
 .dice-one {
   position: absolute;
-  left: 51%;
+  left: -110px;
 }
 
 .dice-two {
   position: absolute;
-  left: 41%;
-  padding-top: -10px;
+  /* left: 41%; */
+  /* padding-top: -10px; */
+  left: 15px;
 }
 
 .side {
@@ -331,30 +439,28 @@ a {
   color: white;
   text-decoration: none;
 }
+/* inst page footer */
 #instructionpg {
   position: absolute;
-  top: 755px;
+  top: 90%;
   left: 100px;
   padding: 30px;
   display: flex;
-  font-size: 20px;
   font-weight: 600;
   justify-content: left;
   flex-direction: row;
-  gap: 200px;
-  font-size: 25px bold;
+  gap: 400px;
+  font-size: 25px;
 }
 #gamepg {
-  display: flex;
   max-width: 100%;
+  display: flex;
+  justify-content: space-between;
   margin-left: 70px;
   margin-right: 70px;
-  position: absolute;
-  top: 90%;
-  gap: 1000px;
-  font-size: 20px;
   font-weight: 600;
-  font-size: 25px bold;
+  font-size: 25px;
+  z-index: -10000;
 }
 
 /* I will fix the responsiveness */

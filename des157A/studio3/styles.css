@@ -401,7 +401,7 @@ a {
 /* inst page footer */
 #instructionpg {
   position: absolute;
-  top: 655px;
+  top: 755px;
   left: 100px;
   padding: 30px;
   display: flex;
