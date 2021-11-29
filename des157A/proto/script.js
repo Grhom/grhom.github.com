@@ -50,9 +50,12 @@
   var bone2 = document.getElementsByClassName("bone2");
   var bones = [bone1, bone2];
 
+  // show and hide instructions
+
   help.addEventListener("click", function () {
     helpcard.hidden = false;
   });
+  // volume
   volume.addEventListener("change", function (e) {
     bark.volume = e.currentTarget.value / 100;
     happy.volume = e.currentTarget.value / 100;
@@ -83,6 +86,7 @@
 
   mute.addEventListener("click", unmute);
 
+  // start game
   startGame.addEventListener("click", function () {
     let name1 = title1.value || gameData.players[0];
     let name2 = title2.value || gameData.players[1];
@@ -103,7 +107,6 @@
     document.getElementById("quit").addEventListener("click", function () {
       location.reload();
     });
-    console.log("robert");
     setUpTurn();
   });
 
