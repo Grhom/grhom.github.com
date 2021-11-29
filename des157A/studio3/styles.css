@@ -20,14 +20,18 @@ body {
   text-align: center;
   color: white;
   margin-top: 0;
-  padding-left: 32%;
-  padding-top: 3%;
+  padding-top: 5%;
 }
 
 #header {
   display: flex;
   flex-direction: row;
-  margin-bottom: 33px;
+  margin-bottom: 25px;
+}
+.box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 #header img {
   align-self: center;
@@ -62,13 +66,9 @@ body {
   transition: 0.3s;
 }
 
-#sound {
-  padding-top: 2%;
-  padding-left: 15%;
-}
-#help {
+/* #help {
   padding-left: 6%;
-}
+} */
 /* .slider {
   -webkit-appearance: none;
   width: 100%;
@@ -100,10 +100,10 @@ body {
 } */
 
 .roll-button button {
-  position: absolute;
+  position: relative;
   top: 93%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 170px);
   max-width: 50%;
   max-height: 50%;
   padding: 15px 50px;
@@ -116,6 +116,11 @@ body {
   box-shadow: 1px 3px #bac79f;
   outline: none;
   transition: 0.3s;
+  z-index: 0;
+}
+
+#roll {
+  z-index: 0;
 }
 
 #gamecontrol button {
@@ -130,11 +135,11 @@ body {
   box-shadow: 1px 3px #bac79f;
 }
 #gamecontrol {
-  position: absolute;
+  position: relative;
   text-align: center;
   top: 82%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 40%);
   max-width: 50%;
   max-height: 50%;
 }
@@ -155,12 +160,12 @@ button:active {
 }
 #happycorgi,
 #angrycorgi {
-  position: absolute;
+  position: relative;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 45%;
-  max-height: 45%;
+  transform: translate(-50%, -40%);
+  max-width: 100%;
+  max-height: 100%;
 }
 #scoreheader {
   max-width: 100%;
@@ -233,12 +238,14 @@ input:focus {
 
 /* styling dice */
 .diceroll {
+  display: flex;
+  /* flex: 1; */
   position: relative;
+  /* justify-content: center; */
   width: auto;
-  padding-left: 50%;
-  padding-right: 50%;
+  left: 50%;
   height: 100%;
-  transform: translateY(-50px);
+  transform: translateY(50px);
 }
 
 .dice {
@@ -261,13 +268,14 @@ input:focus {
 
 .dice-one {
   position: absolute;
-  left: 51%;
+  left: -110px;
 }
 
 .dice-two {
   position: absolute;
-  left: 41%;
-  padding-top: -10px;
+  /* left: 41%; */
+  /* padding-top: -10px; */
+  left: 15px;
 }
 
 .side {
@@ -405,16 +413,16 @@ a {
   font-size: 25px bold;
 }
 #gamepg {
-  display: flex;
+  margin-top: 10%;
   max-width: 100%;
+  display: flex;
+  justify-content: space-between;
   margin-left: 70px;
   margin-right: 70px;
-  position: absolute;
-  top: 90%;
-  gap: 1000px;
   font-size: 20px;
   font-weight: 600;
   font-size: 25px bold;
+  z-index: -10000;
 }
 
 /* I will fix the responsiveness */

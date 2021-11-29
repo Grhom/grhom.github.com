@@ -19,10 +19,10 @@
   </head>
   <body>
     <div id="header">
-      <img src="images/help.png" id="help" />
-      <h1 id="win">Game of Corgi</h1>
+      <div class="box"><img src="images/help.png" id="help" /></div>
+      <div class="box"><h1 id="win">Game of Corgi</h1></div>
 
-      <div id="sound">
+      <div id="sound" class="box">
         <img src="images/soundicon.png" alt="sound" id="playsound" />
         <img src="images/mute.png" alt="mute" id="mute" hidden="true" />
         <input type="range" class="slider" id="volume" />
@@ -46,6 +46,15 @@
           <img src="images/scoredog.png" alt="decoration" />
           <div id="scorecount1"><h2>Bones</h2></div>
         </div>
+      </div>
+      <div id="corgi">
+        <img src="images/happycorgi.png" alt="corgi" id="happycorgi" />
+        <img
+          src="images/angrycorgi.png"
+          alt="corgi"
+          id="angrycorgi"
+          hidden="true"
+        />
       </div>
 
       <div id="player2" class="nohighlight">
@@ -71,6 +80,7 @@
     <div id="game"></div>
     <div id="actions"></div>
     <!-- game container for dice and the dots -->
+
     <div class="diceroll">
       <div id="dice1" class="dice dice-one">
         <div id="dice-one-side-one" class="side one">
@@ -147,16 +157,6 @@
     </div>
 
     <!-- game container for dice and dots ends here -->
-
-    <div id="corgi">
-      <img src="images/happycorgi.png" alt="corgi" id="happycorgi" />
-      <img
-        src="images/angrycorgi.png"
-        alt="corgi"
-        id="angrycorgi"
-        hidden="true"
-      />
-    </div>
     <div id="roll" class="roll-button" hidden="true">
       <button>ROLL!</button>
     </div>
