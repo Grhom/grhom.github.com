@@ -19,12 +19,12 @@
   </head>
   <body>
     <div id="header">
-      <div class="box"><img src="images/help.png" id="help" /></div>
+      <div class="box"><img src="images/help.png" id="help" alt="help" /></div>
       <div class="box"><h1 id="win">Game of Corgi</h1></div>
 
       <div id="sound" class="box">
         <img src="images/soundicon.png" alt="sound" id="playsound" />
-        <img src="images/mute.png" alt="mute" id="mute" hidden="true" />
+        <img src="images/mute.png" alt="mute" id="mute" hidden="hidden" />
         <input type="range" class="slider" id="volume" />
         <audio id="bark" src="sounds/bark.mp3"></audio>
         <audio id="happy" src="sounds/happypup.mp3"></audio>
@@ -53,7 +53,7 @@
           src="images/angrycorgi.png"
           alt="corgi"
           id="angrycorgi"
-          hidden="true"
+          hidden="hidden"
         />
       </div>
 
@@ -157,7 +157,7 @@
     </div>
 
     <!-- game container for dice and dots ends here -->
-    <div id="roll" class="roll-button" hidden="true">
+    <div id="roll" class="roll-button" hidden="hidden">
       <button>ROLL!</button>
     </div>
     <footer id="gamepg">
@@ -165,7 +165,10 @@
         href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fgrhom.github.io%2Fdes157A%2Fproto%2Fgamepg.html"
         >Valid HTML 5</a
       >
-      <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+      <a
+        href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgrhom.github.io%2Fdes157A%2Fstudio3%2Fstyles.css"
+        >Valid CSS</a
+      >
     </footer>
   </body>
 </html>
