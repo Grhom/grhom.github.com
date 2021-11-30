@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>User Test Results</title>
+  </head>
+  <body>
+    <h1 id="header">
+      Game of Corgi<br />
+      User Test Results
+    </h1>
+    <section id="corgi">
+      <div id="corgis">
+        <img src="images/windog.gif" alt="corgidrawing" id="wincorgi" />
+        <img src="images/cogi_move.gif" alt="corgidrawing" id="angryhappy" />
+      </div>
+    </section>
+    <a href="#scroll" id="continue">CONTINUE</a>
+    <section id="scroll">
+      <h1><span>User Test 1</span></h1>
+      <h3>Feedback Session</h3>
+      <figure>
+        <img src="images/vlad.png" alt="mu" />
+        <figcaption>Vlad interacting with my Game</figcaption>
+      </figure>
+      <p>
+        Vlad enjoyed the dice animation and the overall design interface. He
+        commented on the animations, graphics, and colors. Some feedback he gave
+        aligns with the questions I had in mind for my user testing.
+      </p>
+      <p>
+        <span
+          >1. What do you think can be improved to indicate who won in the
+          game?</span
+        >
+        <br />
+        The winning indication is clear to Vlad because the sounds and graphics
+        make it very intuitive. He enjoyed the bone visual and the puppy sounds
+        that make it easy to show when someone wins.
+      </p>
+      <p>
+        <span
+          >2. What do you think can be improved to indicate the player’s
+          turn?</span
+        >
+        <br />
+        He emphasized how the main issue with the game was improving the
+        interface to help indicate the player’s turn. I think what confused him
+        the most was the bug in my game. I noticed how the opposite player would
+        receive points from the player that is rolling the dice. This error made
+        it confusing for him to understand whose turn it was. In other
+        instances, it worked according to the player’s role, but I will go back
+        and fix this issue.
+      </p>
+      <p>
+        <span
+          >3. How intuitive was it for you to enter your name before you played
+          the game?</span
+        >
+        <br />
+        He had some comments about the autocomplete and adding styling to the
+        form field for the name to help match the theme I have.
+      </p>
+    </section>
+    <section id="ut1">
+      <h1><span>User Test 2</span></h1>
+      <h3>Feedback Session</h3>
+      <figure>
+        <img src="images/ali.png" alt="mu" />
+        <figcaption>Ali interacting with my Game</figcaption>
+      </figure>
+      <p>
+        Ali enjoyed the styling and the overall theme of the interface. She
+        wanted the options she could interact with, such as the slider for the
+        sound, the help icon to refer back to the instructions, and the alert
+        for the user testing. Similar to Vlad, Ali commented on some of the
+        questions I prepared for. In addition, she commented on the buttons and
+        how they are all styled the same. The start button isn’t functional
+        after you start the game, so I plan to remove it and only have the
+        restart button to make it more straightforward for the user.
+      </p>
+      <p>
+        <span
+          >1. What do you think can be improved to indicate who won in the
+          game?</span
+        >
+        <br />
+        She commented on having words or a pop-up on the bottom of the screen
+        when the roll button goes away to make it more straightforward for the
+        user the game is over and a player has won. She mentioned that the game
+        control area is the main focus and hot spot of the screen, making it
+        more seamless to have an indicator in that screen section than the
+        header.
+      </p>
+      <p>
+        <span
+          >2. What do you think can be improved to indicate the player’s
+          turn?</span
+        >
+        <br />
+        Similarly, Ali commented to add pop-ups and text to clarify when the
+        person’s turn has been switched.
+      </p>
+      <p>
+        <span
+          >3. How intuitive was it for you to enter your name before you played
+          the game?</span
+        >
+        <br />
+        Ali suggested adding styling to the name section and setting up the form
+        as an active stater.
+      </p>
+    </section>
+    <section>
+      <h1><span>User Test 3</span></h1>
+      <h3>Feedback Session</h3>
+      <figure>
+        <img src="images/cody.png" alt="cody" />
+        <figcaption>Cody interacting with my Game</figcaption>
+      </figure>
+      <p>
+        Cody also liked the interface and the designs of the game. The most
+        important feedback I received that aligned with the other testers was
+        the start button and the indication of the player’s turn. Cody also
+        commented on more minor design details like padding and making the items
+        on the page more centered aligned.
+      </p>
+      <p>
+        <span
+          >1. What do you think can be improved to indicate who won in the
+          game?</span
+        >
+        <br />
+        He had no comments about the winning screen. He liked the visuals and
+        thought the treat is a good indicator of who is receiving points and who
+        wins the game after.
+      </p>
+      <p>
+        <span
+          >2. What do you think can be improved to indicate the player’s
+          turn?</span
+        >
+        <br />
+        Similar to the other user tests, it was difficult to tell which player’s
+        turn to roll the dice. Cody suggested making the border thicker and more
+        prominent and making the other card more transparent.
+      </p>
+      <p>
+        <span
+          >3. How intuitive was it for you to enter your name before you played
+          the game?</span
+        >
+        <br />
+        Cody commented how he wouldn’t know that he needed to enter names for
+        the players if I didn’t add the user test screens.
+      </p>
+    </section>
+    <section id="ut1">
+      <h1><span>Final implementation</span></h1>
+      <p>
+        From the feedback I received, I plan to adjust the game controls and
+        clarify indicators. For the game controls, all of the users were unsure
+        which buttons to click. Once the user clicks on the "start" button, it
+        should disappear and only show the "roll" button. I also want to
+        rearrange the heirachy of the buttons and but the main focus on the roll
+        button.
+      </p>
+
+      <p>
+        For the indicators, there were confusions on the name fields and some
+        confusions on who won the game. To make it more clear, I plan to
+        seperate each step into separate screens than having many actions in one
+        screen. After the user reads the instructions, one screen will appear
+        with two scoreboards and they can only enter the player's name to
+        continue. The next screen will be the game itseld
+      </p>
+
+      <p>
+        To make the scoreboards more clear, I plan to stylie brighter and
+        boldder colors to highlight the player's turn and use pop-up text that
+        explicitly indicates it.
+      </p>
+
+      <p>
+        Lastly, I will include an overlay of text on the bottom to indicate who
+        won the game instead of leaving it on the header.
+      </p>
+      <img src="images/windog.gif" alt="corgidrawing" id="wincorgi" />
+    </section>
+  </body>
+  <footer>
+    <a
+      href="https://validator.w3.org/check?uri=https://your-username.github.io/des157"
+      >Valid HTML 5</a
+    >
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+  </footer>
+</html>

@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #201610;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#continue {
+  top: -530px;
+  left: 46%;
+  text-decoration: none;
+  position: relative;
+  padding: 15px;
+  color: #fff;
+  background-color: #fe92a3;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 1px 3px #bac79f;
+  z-index: 1000000;
+}
+
+#header {
+  background-color: #abbe81;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+figure img {
+  width: 550px;
+  height: auto;
+  margin-left: -40px;
+}
+
+#corgi {
+  display: flex;
+  justify-content: space-around;
+  margin: 0%;
+  background-color: #d5e3b5;
+  padding: 4em;
+}
+#wincorgi,
+#angryhappy {
+  position: relative;
+  width: 500px;
+  height: auto;
+  z-index: 0;
+  margin-bottom: 0;
+}
+span {
+  color: #fd958e;
+}
+section {
+  padding: 3em;
+  margin: 3em;
+  column-count: 2;
+  column-gap: 20px;
+  column-width: 1in;
+  line-height: 2em;
+}
+p {
+  width: 90%;
+  text-align: left;
+}
+
+section {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 25px;
+  /*   text-align: left; */
+  line-height: 1.7em;
+  /* header is colliding with nav in desktop view? */
+}
+section p:first-child {
+  margin-top: 0;
+}
+h2 {
+  color: #fd958e;
+  font-size: 20px;
+}
+h3 {
+  font-size: 22px;
+}
+section p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 200%;
+  text-align: left;
+}
+#ut1 {
+  margin: 0%;
+  background-color: rgb(248, 248, 248);
+  padding: 4em;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 600px;
+}
+footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 100px;
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  gap: 200px;
+}
+footer a {
+  color: gray;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #fd958e;
+}
+figcaption {
+  font-size: small;
+}
