@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of PIG</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="helpcard" hidden="hidden">
+      <div id="game-play" class="play-game">
+        <button onclick="window.location.href='gamepg.html'">PLAY!</button>
+      </div>
+      <img id="inst" src="images/instructions.png" alt="Instrcutions" />
+    </div>
+    <div id="header">
+      <div class="box">
+        <img src="images/help.png" id="help" alt="help" />
+      </div>
+      <div class="box"><h1 id="win">Game of Corgi</h1></div>
+
+      <div id="sound" class="box">
+        <img src="images/soundicon.png" alt="sound" id="playsound" />
+        <img src="images/mute.png" alt="mute" id="mute" hidden="hidden" />
+        <input type="range" class="slider" id="volume" />
+        <audio id="bark" src="sounds/bark.mp3"></audio>
+        <audio id="happy" src="sounds/happypup.mp3"></audio>
+        <audio id="rolling" src="sounds/dicesound.wav"></audio>
+      </div>
+    </div>
+
+    <div id="scoreboard">
+      <div id="player1" class="highlight">
+        <div id="name1">
+          <input
+            type="text"
+            name="qname"
+            class="qname"
+            placeholder="Enter Name"
+          />
+        </div>
+        <div id="score1">
+          <img src="images/scoredog.png" alt="decoration" />
+          <div id="scorecount1"><h2>Bones</h2></div>
+        </div>
+      </div>
+      <div id="corgi">
+        <img src="images/happycorgi.png" alt="corgi" id="happycorgi" />
+        <img
+          src="images/angrycorgi.png"
+          alt="corgi"
+          id="angrycorgi"
+          hidden="hidden"
+        />
+        <img
+          src="images/windog.gif"
+          alt="corgi"
+          id="wincorgi"
+          hidden="hidden"
+        />
+      </div>
+
+      <div id="player2" class="nohighlight">
+        <div id="name2">
+          <input
+            type="text"
+            name="qname"
+            class="qname"
+            placeholder="Enter Name"
+          />
+        </div>
+        <div id="score2">
+          <img src="images/scoredog.png" alt="decoration" />
+          <div id="scorecount2"><h2>Bones</h2></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="bone1">
+        <img src="images/emptybowl.png" alt="bone" class="bone1" />
+        <img src="images/1bone.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/2bones.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/3bones.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/4bones.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/5bones.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/bones.png" alt="bone" hidden="hidden" class="bone1" />
+      </div>
+      <div id="controls">
+        <div id="gamecontrol">
+          <button id="startgame">START</button>
+        </div>
+
+        <div id="game"></div>
+        <div id="actions"></div>
+        <!-- game container for dice and the dots -->
+
+        <div class="diceroll">
+          <div id="dice1" class="dice dice-one">
+            <div id="dice-one-side-one" class="side one">
+              <div class="dot one-1"></div>
+            </div>
+            <div id="dice-one-side-two" class="side two">
+              <div class="dot two-1"></div>
+              <div class="dot two-2"></div>
+            </div>
+            <div id="dice-one-side-three" class="side three">
+              <div class="dot three-1"></div>
+              <div class="dot three-2"></div>
+              <div class="dot three-3"></div>
+            </div>
+            <div id="dice-one-side-four" class="side four">
+              <div class="dot four-1"></div>
+              <div class="dot four-2"></div>
+              <div class="dot four-3"></div>
+              <div class="dot four-4"></div>
+            </div>
+            <div id="dice-one-side-five" class="side five">
+              <div class="dot five-1"></div>
+              <div class="dot five-2"></div>
+              <div class="dot five-3"></div>
+              <div class="dot five-4"></div>
+              <div class="dot five-5"></div>
+            </div>
+            <div id="dice-one-side-six" class="side six">
+              <div class="dot six-1"></div>
+              <div class="dot six-2"></div>
+              <div class="dot six-3"></div>
+              <div class="dot six-4"></div>
+              <div class="dot six-5"></div>
+              <div class="dot six-6"></div>
+            </div>
+          </div>
+          <div>
+            <div id="dice2" class="dice dice-two">
+              <div id="dice-two-side-one" class="side one">
+                <div class="dot one-1"></div>
+              </div>
+              <div id="dice-two-side-two" class="side two">
+                <div class="dot two-1"></div>
+                <div class="dot two-2"></div>
+              </div>
+              <div id="dice-two-side-three" class="side three">
+                <div class="dot three-1"></div>
+                <div class="dot three-2"></div>
+                <div class="dot three-3"></div>
+              </div>
+              <div id="dice-two-side-four" class="side four">
+                <div class="dot four-1"></div>
+                <div class="dot four-2"></div>
+                <div class="dot four-3"></div>
+                <div class="dot four-4"></div>
+              </div>
+              <div id="dice-two-side-five" class="side five">
+                <div class="dot five-1"></div>
+                <div class="dot five-2"></div>
+                <div class="dot five-3"></div>
+                <div class="dot five-4"></div>
+                <div class="dot five-5"></div>
+              </div>
+              <div id="dice-two-side-six" class="side six">
+                <div class="dot six-1"></div>
+                <div class="dot six-2"></div>
+                <div class="dot six-3"></div>
+                <div class="dot six-4"></div>
+                <div class="dot six-5"></div>
+                <div class="dot six-6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="roll" class="roll-button" hidden="hidden">
+          <button>ROLL!</button>
+        </div>
+      </div>
+      <div id="bone2">
+        <img src="images/emptybowl.png" alt="bone" class="bone2" />
+        <img src="images/1bone.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/2bones.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/3bones.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/4bones.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/5bones.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/bones.png" alt="bone" hidden="hidden" class="bone2" />
+      </div>
+
+      <!-- game container for dice and dots ends here -->
+    </div>
+    <footer id="gamepg">
+      <a
+        href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fgrhom.github.io%2Fdes157A%2Fproto%2Fgamepg.html"
+        >Valid HTML 5</a
+      >
+      <a
+        href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgrhom.github.io%2Fdes157A%2Fstudio3%2Fstyles.css"
+        >Valid CSS</a
+      >
+    </footer>
+  </body>
+</html>

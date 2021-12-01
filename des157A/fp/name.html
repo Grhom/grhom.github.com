@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of PIG</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="scriptname.js" defer></script>
+  </head>
+  <body>
+    <div id="helpcard" hidden="hidden">
+      <div id="game-play" class="play-game">
+        <button onclick="window.location.href='gamepg.html'">PLAY!</button>
+      </div>
+      <img id="inst" src="images/instructions.png" alt="Instrcutions" />
+    </div>
+    <h1 id="nameheader">Game of Corgi</h1>
+
+    <div id="entername">
+      <div id="scoreboard">
+        <div id="player1" class="highlight">
+          <div id="name1">
+            <input
+              type="text"
+              name="qname"
+              class="qname"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div id="score1">
+            <img src="images/scoredog.png" alt="decoration" />
+            <div id="scorecount1"><h2>Bones</h2></div>
+          </div>
+        </div>
+        <div id="corgi">
+          <img src="images/cogi_move.gif" alt="corgi" id="dog" />
+        </div>
+
+        <div id="player2" class="nohighlight">
+          <div id="name2">
+            <input
+              type="text"
+              name="qname"
+              class="qname"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div id="score2">
+            <img src="images/scoredog.png" alt="decoration" />
+            <div id="scorecount2"><h2>Bones</h2></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="bone1">
+        <img src="images/emptybowl.png" alt="bone" class="bone1" />
+        <img src="images/1bone.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/2bones.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/3bones.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/4bones.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/5bones.png" alt="bone" hidden="hidden" class="bone1" />
+        <img src="images/bones.png" alt="bone" hidden="hidden" class="bone1" />
+      </div>
+      <div id="controls">
+        <div id="gamecontrol">
+          <button id="continue">CONTINUE</button>
+        </div>
+      </div>
+      <div id="bone2">
+        <img src="images/emptybowl.png" alt="bone" class="bone2" />
+        <img src="images/1bone.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/2bones.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/3bones.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/4bones.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/5bones.png" alt="bone" hidden="hidden" class="bone2" />
+        <img src="images/bones.png" alt="bone" hidden="hidden" class="bone2" />
+      </div>
+    </div>
+    <footer id="namepg">
+      <a
+        href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fgrhom.github.io%2Fdes157A%2Fproto%2Fgamepg.html"
+        >Valid HTML 5</a
+      >
+      <a
+        href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgrhom.github.io%2Fdes157A%2Fstudio3%2Fstyles.css"
+        >Valid CSS</a
+      >
+    </footer>
+  </body>
+</html>
