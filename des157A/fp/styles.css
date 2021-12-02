@@ -12,6 +12,15 @@ body {
   padding-top: 2%;
   padding-bottom: 2%;
 }
+#indicators {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -10px;
+  color: white;
+  text-shadow: -1px 1.5px 0 #ff84ad, 1px 1.5px 0 #ff84ad, 1px -1.5px 0 #ff84ad,
+    -1px -1.5px 0 #ff84ad;
+}
 #bone1 img,
 #bone2 img,
 #dog {
@@ -136,16 +145,12 @@ body {
   padding-left: 45%;
 }
 #inst {
-  max-width: 93%;
-  max-height: 93%;
-  width: 720px;
+  width: 700px;
   height: auto;
 }
 .play-button button {
   position: relative;
-  transform: translate(170%, 1000%);
-  max-width: 22%;
-  max-height: 22%;
+  transform: translate(180%, 1000%);
   padding: 15px 50px;
   color: #fff;
   background-color: #fe92a3;
@@ -195,7 +200,7 @@ body {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -750%);
+  transform: translate(-50%, -400%);
   padding: 15px 60px;
   color: #fff;
   background-color: #fe92a3;
@@ -217,7 +222,24 @@ body {
   position: relative;
   top: 93%;
   left: 50%;
-  transform: translate(-26%, 450%);
+  transform: translate(-15%, 350%);
+  max-height: 50%;
+  position: relative;
+  padding: 15px 50px;
+  color: #fff;
+  background-color: #fe92a3;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 1px 3px #bac79f;
+  z-index: 10000000;
+}
+#gamecontrol #startgame {
+  position: relative;
+  top: 93%;
+  left: 50%;
+  transform: translate(-20%, 350%);
   max-height: 50%;
   position: relative;
   padding: 15px 50px;
@@ -303,8 +325,8 @@ input:focus {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: 11%;
+  margin-right: 11%;
   z-index: 2;
 }
 #player1,
@@ -344,7 +366,6 @@ input:focus {
   width: auto;
   left: 50%;
   height: 100%;
-  transform: translateY(50px);
 }
 
 .dice {
@@ -500,35 +521,34 @@ a {
 /* inst page footer */
 #instructionpg {
   position: absolute;
-  top: 90%;
-  left: 100px;
+  top: 92%;
+  left: 5%;
   padding: 30px;
   display: flex;
   font-weight: 600;
   justify-content: left;
   flex-direction: row;
-  gap: 400px;
-  font-size: 25px;
+  gap: 300px;
+  font-size: 15px;
 }
 #namepg {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 90px;
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: 15%;
+  margin-right: 15%;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 15px;
   z-index: -10000;
 }
 #gamepg {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: 15%;
+  margin-right: 15%;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 15px;
   z-index: -10000;
 }
 

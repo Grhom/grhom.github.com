@@ -49,10 +49,11 @@
   var bone1 = document.getElementsByClassName("bone1");
   var bone2 = document.getElementsByClassName("bone2");
   var bones = [bone1, bone2];
-
-  name1.value = localStorage.getItem("name1");
-  name2.value = localStorage.getItem("name2");
-  console.log("DAS");
+  window.onload = function (e) {
+    title1.value = localStorage.getItem("title1");
+    title2.value = localStorage.getItem("title2");
+  };
+  console.log(localStorage.getItem("title1"));
 
   help.addEventListener("click", function () {
     helpcard.hidden = false;
@@ -104,11 +105,6 @@
 
     ComeOut.hidden = false;
     gameData.index = 0;
-    gameControl.innerHTML += `<button id="quit">RESTART</button>`;
-
-    document.getElementById("quit").addEventListener("click", function () {
-      location.reload();
-    });
 
     setUpTurn();
   });
@@ -116,6 +112,9 @@
   function setUpTurn() {
     scorecount1.innerHTML = `<h2>${gameData.score[0]} Bones</h2>`;
     scorecount2.innerHTML = `<h2>${gameData.score[1]} Bones</h2>`;
+    indicators.innerHTML = `<h2>${
+      gameData.players[gameData.index]
+    }'s Turn!</h2>`;
   }
   // dice animated roll
   ComeOut.onclick = function () {
@@ -230,13 +229,21 @@
       //   setUpTurn();
       // });
       setTimeout(setUpTurn, 0);
-      checkWinningCondition();
+      setTimeout(checkWinningCondition, 10);
+      // checkWinningCondition();
     }
     function checkWinningCondition() {
       if (gameData.score[gameData.index] > gameData.gameEnd) {
         // win.innerHTML=`${} Wins!`
-        win.innerHTML = `${gameData.players[gameData.index]} wins!`;
+        indicators.innerHTML = `<h2>${
+          gameData.players[gameData.index]
+        } wins!</h2>`;
         console.log("win!");
+        // restart appears
+        gameControl.innerHTML += `<button id="quit">RESTART</button>`;
+        document.getElementById("quit").addEventListener("click", function () {
+          location.reload();
+        });
         setTimeout(() => {
           happy.play();
         }, 500);
